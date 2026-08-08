@@ -21,21 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.classList.remove("is-open");
     mobileNav.classList.remove("is-open");
     scrim.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    mobileNav.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    toggle.focus();
   }
   function openNav() {
     toggle.classList.add("is-open");
     mobileNav.classList.add("is-open");
     scrim.classList.add("is-open");
+    toggle.setAttribute("aria-expanded", "true");
+    mobileNav.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    var firstLink = mobileNav.querySelector("a");
+    if (firstLink) firstLink.focus();
   }
   if (toggle && mobileNav && scrim) {
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", "mobile-nav");
+    mobileNav.setAttribute("aria-hidden", "true");
+    mobileNav.id = "mobile-nav";
     toggle.addEventListener("click", function () {
       toggle.classList.contains("is-open") ? closeNav() : openNav();
     });
     scrim.addEventListener("click", closeNav);
     mobileNav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeNav);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && toggle.classList.contains("is-open")) {
+        closeNav();
+      }
     });
   }
 
