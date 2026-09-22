@@ -1,0 +1,17 @@
+# Volta Power Electric
+
+> Licensed residential and commercial electrician (CA C-10 Contractor License #1161104), based in Rosemead, CA, serving Los Angeles County, Orange County, San Bernardino County, Ventura County and the Inland Empire. Services include EV charger installation, SPAN Smart Panel installation, Tesla Powerwall and battery backup, electrical panel upgrades, generator installation, home and ADU rewiring, troubleshooting and repair, lighting, and commercial tenant improvements and maintenance contracts.
+
+Owner-operated by founder Abel Chavira: UEI College certified electrical technician, OSHA 10 certified, SPAN Authorized Installer, and Tesla Certified Installer. Offers 24/7 emergency electrical service; standard hours Monday-Saturday 7am-7pm. Phone: (562) 639-0720. Email: abel@voltapowerelectric.com.
+
+## Pages
+
+- [Home](https://voltapowerelectric.com/): Company overview, services summary and service area.
+- [Residential Electrical Services](https://voltapowerelectric.com/residential.html): EV chargers, panel upgrades, Smart Panels, battery backup, generators, ADU rewiring, troubleshooting, lighting, and a residential FAQ.
+- [Commercial Electrical Services](https://voltapowerelectric.com/commercial.html): Tenant improvements, EV fleet charging, backup power, panel upgrades, code compliance, maintenance contracts, and a commercial FAQ.
+- [About / Meet the Founder](https://voltapowerelectric.com/about.html): Company background and Abel Chavira's certifications.
+- [Contact](https://voltapowerelectric.com/contact.html): Phone, email, office address, hours, quote request form and online booking.
+
+## Optional
+
+- [SPAN Authorized Installer Certificate (PDF)](https://voltapowerelectric.com/documents/Abel-Chavira-SPAN-Authorized-Installer-Certificate.pdf): Verification of Abel Chavira's SPAN Smart Panel installer certification.
