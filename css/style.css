@@ -812,3 +812,86 @@ button:focus-visible,
     scroll-behavior: auto !important;
   }
 }
+
+
+/* ---------- License badge + PDF lightbox modal ---------- */
+.portrait-frame { position: relative; }
+.license-badge-corner {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(6,14,28,.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: var(--gold-300);
+  font-family: var(--font-head);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  cursor: pointer;
+  z-index: 2;
+}
+.license-badge-corner:hover { border-color: var(--gold-500); color: var(--gold-400); }
+
+.license-link-under {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--navy-900);
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.license-link-under:hover { color: var(--gold-600); }
+
+.pdf-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(6,14,28,.82);
+  z-index: 1000;
+  padding: 30px 16px;
+  align-items: center;
+  justify-content: center;
+}
+.pdf-modal.is-open { display: flex; }
+.pdf-modal-inner {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  width: min(900px, 100%);
+  height: min(85vh, 1100px);
+  position: relative;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.pdf-modal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: var(--navy-900);
+  color: var(--white);
+  font-size: .85rem;
+}
+.pdf-modal-bar a { color: var(--gold-300); font-weight: 700; }
+.pdf-modal-close {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.pdf-modal-close:hover { color: var(--gold-400); }
+.pdf-modal-inner iframe { flex: 1; width: 100%; border: none; }
