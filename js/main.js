@@ -112,8 +112,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var pdfCloseBtn = pdfModal.querySelector(".pdf-modal-close");
 
     function openPdfModal() {
+      if (window.matchMedia("(max-width: 640px)").matches) {
+        window.open(pdfSrc, "_blank", "noopener");
+        return;
+      }
       if (pdfIframe && !pdfIframe.getAttribute("src")) {
-        pdfIframe.setAttribute("src", pdfSrc);
+        pdfIframe.setAttribute("src", pdfSrc + "#view=FitH");
       }
       pdfModal.classList.add("is-open");
       document.body.style.overflow = "hidden";
