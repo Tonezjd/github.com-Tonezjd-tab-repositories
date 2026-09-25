@@ -928,14 +928,18 @@ button:focus-visible,
 .work-slide img {
   width: 100%;
   aspect-ratio: 3 / 4;
+  max-height: 440px;
   object-fit: cover;
   display: block;
+  background: var(--navy-700);
+  color: transparent;
+  font-size: 0;
 }
 .work-slide figcaption {
   padding: 16px 20px 20px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 .work-slide figcaption strong {
   color: var(--white);
@@ -949,20 +953,25 @@ button:focus-visible,
 }
 .carousel-btn {
   flex: 0 0 auto;
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.16);
-  background: rgba(255,255,255,.06);
-  color: var(--white);
+  border: none;
+  background: var(--gold-400);
+  color: var(--navy-950);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background .2s ease, border-color .2s ease, color .2s ease;
+  box-shadow: var(--shadow-md);
+  transition: background .2s ease, transform .2s ease;
 }
-.carousel-btn:hover { background: rgba(232,163,61,.16); border-color: var(--gold-500); color: var(--gold-300); }
-.carousel-btn svg { width: 20px; height: 20px; }
+.carousel-btn:hover { background: var(--gold-300); transform: scale(1.06); }
+.carousel-btn svg { width: 24px; height: 24px; stroke-width: 2.4; }
+@media (max-width: 640px) {
+  .carousel-btn { width: 42px; height: 42px; }
+  .carousel-btn svg { width: 20px; height: 20px; }
+}
 .carousel-dots {
   display: flex;
   justify-content: center;
