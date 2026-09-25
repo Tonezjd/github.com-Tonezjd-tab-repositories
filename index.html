@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -378,8 +378,12 @@
       </ul>
       <a href="about.html" class="btn btn-outline-navy" style="margin-top:8px;">Meet the Owner</a>
     </div>
-    <div style="border-radius:var(--radius-lg); overflow:hidden; aspect-ratio: 4/5;">
-      <img src="assets/images/abel-chavira.jpg" alt="Abel Chavira, Owner &amp; Certified Electrician" style="width:100%; height:100%; object-fit:cover; display:block;">
+    <div>
+      <div class="portrait-frame" style="border-radius:var(--radius-lg); overflow:hidden; aspect-ratio: 4/5;">
+        <img src="assets/images/abel-chavira.jpg" alt="Abel Chavira, Owner &amp; Certified Electrician" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <button type="button" class="license-badge-corner" data-open-pdf-modal aria-haspopup="dialog">C-10 License #1161104</button>
+      </div>
+      <button type="button" class="license-link-under" data-open-pdf-modal>C-10 Licensed #1161104</button>
     </div>
   </div>
 </section>
@@ -597,6 +601,20 @@
   <a href="contact.html" class="btn btn-block" style="background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;">Get Quote</a>
 </div>
 
-<script src="js/main.js"></script>
+<!-- ============ LICENSE PDF MODAL ============ -->
+<div class="pdf-modal" id="license-pdf-modal" role="dialog" aria-modal="true" aria-label="C-10 Contractor License">
+  <div class="pdf-modal-inner">
+    <div class="pdf-modal-bar">
+      <span>CA C-10 Contractor License #1161104</span>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a href="documents/Volta-Power-Electric-C10-License-1161104.pdf" target="_blank" rel="noopener">Open in new tab &#8599;</a>
+        <button type="button" class="pdf-modal-close" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <iframe src="" data-pdf-src="documents/Volta-Power-Electric-C10-License-1161104.pdf" title="CA C-10 Contractor License"></iframe>
+  </div>
+</div>
+
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
