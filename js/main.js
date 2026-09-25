@@ -136,4 +136,59 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  /* ---- Our Work carousel (homepage) ---- */
+  var workTrack = document.querySelector("[data-carousel-track]");
+  if (workTrack) {
+    var workSlides = Array.prototype.slice.call(workTrack.querySelectorAll("[data-carousel-slide]"));
+    var workPrevBtn = document.querySelector("[data-carousel-prev]");
+    var workNextBtn = document.querySelector("[data-carousel-next]");
+    var workDotsWrap = document.querySelector("[data-carousel-dots]");
+    var workDots = [];
+
+    workSlides.forEach(function (slide, i) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "carousel-dot" + (i === 0 ? " is-active" : "");
+      dot.setAttribute("aria-label", "Go to project photo " + (i + 1));
+      dot.addEventListener("click", function () {
+        slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      });
+      if (workDotsWrap) workDotsWrap.appendChild(dot);
+      workDots.push(dot);
+    });
+
+    function setActiveWorkDot(index) {
+      workDots.forEach(function (d, i) {
+        d.classList.toggle("is-active", i === index);
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      var workObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var idx = workSlides.indexOf(entry.target);
+              if (idx !== -1) setActiveWorkDot(idx);
+            }
+          });
+        },
+        { root: workTrack, threshold: 0.6 }
+      );
+      workSlides.forEach(function (slide) { workObserver.observe(slide); });
+    }
+
+    function scrollWorkBy(direction) {
+      var amount = workTrack.clientWidth * 0.82 * direction;
+      workTrack.scrollBy({ left: amount, behavior: "smooth" });
+    }
+    if (workPrevBtn) workPrevBtn.addEventListener("click", function () { scrollWorkBy(-1); });
+    if (workNextBtn) workNextBtn.addEventListener("click", function () { scrollWorkBy(1); });
+
+    workTrack.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { scrollWorkBy(1); }
+      if (e.key === "ArrowLeft") { scrollWorkBy(-1); }
+    });
+  }
 });
