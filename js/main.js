@@ -102,4 +102,38 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  /* ---- License PDF modal (About page) ---- */
+  var pdfModal = document.getElementById("license-pdf-modal");
+  if (pdfModal) {
+    var pdfIframe = pdfModal.querySelector("iframe");
+    var pdfSrc = pdfIframe ? pdfIframe.getAttribute("data-pdf-src") : "";
+    var pdfOpeners = document.querySelectorAll("[data-open-pdf-modal]");
+    var pdfCloseBtn = pdfModal.querySelector(".pdf-modal-close");
+
+    function openPdfModal() {
+      if (pdfIframe && !pdfIframe.getAttribute("src")) {
+        pdfIframe.setAttribute("src", pdfSrc);
+      }
+      pdfModal.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      if (pdfCloseBtn) pdfCloseBtn.focus();
+    }
+    function closePdfModal() {
+      pdfModal.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+    pdfOpeners.forEach(function (btn) {
+      btn.addEventListener("click", openPdfModal);
+    });
+    if (pdfCloseBtn) pdfCloseBtn.addEventListener("click", closePdfModal);
+    pdfModal.addEventListener("click", function (e) {
+      if (e.target === pdfModal) closePdfModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && pdfModal.classList.contains("is-open")) {
+        closePdfModal();
+      }
+    });
+  }
 });
