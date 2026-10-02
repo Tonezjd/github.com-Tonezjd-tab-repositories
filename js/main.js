@@ -17,12 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var mobileNav = document.querySelector(".mobile-nav");
   var scrim = document.querySelector(".nav-scrim");
 
+  function setMobileNavFocusable(focusable) {
+    mobileNav.querySelectorAll("a").forEach(function (a) {
+      if (focusable) a.removeAttribute("tabindex");
+      else a.setAttribute("tabindex", "-1");
+    });
+  }
   function closeNav() {
     toggle.classList.remove("is-open");
     mobileNav.classList.remove("is-open");
     scrim.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
     mobileNav.setAttribute("aria-hidden", "true");
+    setMobileNavFocusable(false);
     document.body.style.overflow = "";
     toggle.focus();
   }
@@ -32,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrim.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
     mobileNav.setAttribute("aria-hidden", "false");
+    setMobileNavFocusable(true);
     document.body.style.overflow = "hidden";
     var firstLink = mobileNav.querySelector("a");
     if (firstLink) firstLink.focus();
@@ -41,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.setAttribute("aria-controls", "mobile-nav");
     mobileNav.setAttribute("aria-hidden", "true");
     mobileNav.id = "mobile-nav";
+    setMobileNavFocusable(false);
     toggle.addEventListener("click", function () {
       toggle.classList.contains("is-open") ? closeNav() : openNav();
     });
