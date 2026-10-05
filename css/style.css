@@ -513,6 +513,11 @@ section { padding: 88px 0; }
   color: var(--gold-600); background: rgba(232,163,61,.12); padding: 4px 10px; border-radius: 6px;
   letter-spacing: .03em; text-transform: uppercase;
 }
+.testi-source {
+  display: inline-flex; align-items: center; gap: 4px; margin-top: 14px;
+  font-size: .78rem; font-weight: 600; color: var(--navy-700); text-decoration: none;
+}
+.testi-source:hover { color: var(--gold-600); }
 
 /* ---------- CTA banner ---------- */
 .cta-banner {
