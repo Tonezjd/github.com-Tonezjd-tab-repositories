@@ -1095,3 +1095,14 @@ button:focus-visible,
   .rebate-gallery figcaption { font-size: .8rem; padding: 26px 12px 10px; }
   .rebate-actions .btn { width: 100%; justify-content: center; }
 }
+
+/* In-text links inside service rows and FAQ answers (e.g. links to the SCE rebate section) */
+.service-row p a,
+.faq-item p a {
+  color: var(--gold-600);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.service-row p a:hover,
+.faq-item p a:hover { color: var(--navy-900); }
