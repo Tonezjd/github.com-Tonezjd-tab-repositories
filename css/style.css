@@ -1004,3 +1004,94 @@ button:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   .work-track { scroll-behavior: auto; }
 }
+
+/* ---------- SCE Charge Ready Home Program section ---------- */
+.sce-rebate .section-head p { color: var(--gray-300); }
+.sce-rebate h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 16px; }
+.rebate-layout { display: grid; grid-template-columns: 5fr 6fr; gap: 48px; align-items: start; margin-bottom: 72px; }
+.rebate-amounts { display: grid; gap: 18px; }
+.rebate-card {
+  background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+  border: 1px solid rgba(240,184,92,.35);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+}
+.rebate-label {
+  display: inline-block;
+  font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gold-400);
+}
+.rebate-amount {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  color: var(--white);
+  margin: 8px 0 10px;
+}
+.rebate-card p { color: var(--gray-300); font-size: .95rem; margin: 0; }
+.rebate-coverage { color: var(--gray-300); font-size: .88rem; margin: 4px 4px 0; }
+.rebate-copy .check-list { margin-bottom: 30px; }
+.rebate-copy .check-list li { color: var(--gray-100); }
+.rebate-copy .check-list svg { color: var(--gold-400); flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; }
+.rebate-copy > p { color: var(--gray-300); margin-bottom: 26px; }
+.rebate-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.rebate-gallery-title { text-align: center; margin-bottom: 26px; }
+.rebate-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+  gap: 14px;
+}
+.rebate-gallery figure {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--navy-800);
+  box-shadow: var(--shadow-md);
+}
+.rebate-gallery .g-feature { grid-column: span 2; grid-row: span 2; }
+.rebate-gallery .g-wide { grid-column: span 2; }
+.rebate-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.rebate-gallery figure:hover img { transform: scale(1.04); }
+.rebate-gallery figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 34px 16px 14px;
+  background: linear-gradient(to top, rgba(6,14,28,.88), rgba(6,14,28,0));
+  color: var(--white);
+  font-family: var(--font-head); font-weight: 700; font-size: .9rem;
+}
+.rebate-faq { max-width: 860px; margin: 72px auto 0; }
+.rebate-faq h3 { text-align: center; margin-bottom: 24px; }
+.faq-item {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 18px 22px;
+  font-family: var(--font-head); font-weight: 700; color: var(--white);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--gold-400); flex: 0 0 auto; }
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item summary:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 2px; border-radius: var(--radius-md); }
+.faq-item p { padding: 0 22px 20px; margin: 0; color: var(--gray-300); font-size: .95rem; }
+.rebate-note { text-align: center; color: var(--gray-500); font-size: .82rem; margin-top: 22px; }
+.rebate-note a { color: var(--gold-400); text-decoration: underline; }
+@media (max-width: 940px) {
+  .rebate-layout { grid-template-columns: 1fr; gap: 40px; }
+  .rebate-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px; }
+}
+@media (max-width: 640px) {
+  .rebate-gallery { grid-auto-rows: 180px; gap: 10px; }
+  .rebate-gallery figcaption { font-size: .8rem; padding: 26px 12px 10px; }
+  .rebate-actions .btn { width: 100%; justify-content: center; }
+}
