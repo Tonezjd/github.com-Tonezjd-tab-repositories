@@ -4,12 +4,15 @@
 
 Owner-operated by founder Abel Chavira: UEI College certified electrical technician, OSHA 10 certified, SPAN Authorized Installer, and Tesla Certified Installer. Offers 24/7 emergency electrical service; standard hours Monday-Saturday 7am-7pm. Phone: (562) 639-0720. Email: abel@voltapowerelectric.com.
 
+Volta Power Electric Inc. is an SCE Charge Ready Home Program Participating Contractor. Southern California Edison's Charge Ready Home Program offers eligible SCE residential customers up to $4,200 toward an electrical panel upgrade with a dedicated Level 2 EV outlet, or up to $1,000 for an EV outlet only. Eligibility is based on household income (under 80% of area median income or enrollment in a qualifying assistance program) or living in a state-designated disadvantaged community. Owning an EV is not required.
+
 ## Pages
 
 - [Home](https://voltapowerelectric.com/): Company overview, services summary and service area.
 - [Residential Electrical Services](https://voltapowerelectric.com/residential.html): EV chargers, panel upgrades, Smart Panels, battery backup, generators, ADU rewiring, troubleshooting, lighting, and a residential FAQ.
 - [Commercial Electrical Services](https://voltapowerelectric.com/commercial.html): Tenant improvements, EV fleet charging, backup power, panel upgrades, code compliance, maintenance contracts, and a commercial FAQ.
 - [About / Meet the Founder](https://voltapowerelectric.com/about.html): Company background and Abel Chavira's certifications.
+- [SCE Charge Ready Home Program](https://voltapowerelectric.com/#sce-rebate): Rebate amounts, eligibility, how Volta Power Electric helps homeowners apply, recent panel and EV charging work, and a program FAQ.
 - [Contact](https://voltapowerelectric.com/contact.html): Phone, email, office address, hours, quote request form and online booking.
 
 ## Optional
