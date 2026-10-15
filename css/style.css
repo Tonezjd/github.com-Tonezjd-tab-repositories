@@ -1106,3 +1106,29 @@ button:focus-visible,
 }
 .service-row p a:hover,
 .faq-item p a:hover { color: var(--navy-900); }
+
+/* ---------- Language toggle (EN | ES) ---------- */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 3px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+}
+.lang-toggle a {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .06em;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--gray-300);
+  transition: background .18s ease, color .18s ease;
+}
+.lang-toggle a:hover { color: var(--white); }
+.lang-toggle a.is-active { background: var(--gold-400); color: var(--navy-950); }
+@media (max-width: 1200px) {
+  .lang-toggle { margin-left: auto; margin-right: -10px; }
+}

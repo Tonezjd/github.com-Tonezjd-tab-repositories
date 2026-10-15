@@ -1,6 +1,8 @@
 // Volta Power Electric — site interactivity
 document.addEventListener("DOMContentLoaded", function () {
 
+  var isEs = (document.documentElement.lang || "").toLowerCase().indexOf("es") === 0;
+
   /* ---- Sticky header shadow on scroll ---- */
   var header = document.querySelector(".site-header");
   if (header) {
@@ -105,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         var notice = form.querySelector(".form-notice");
         if (notice) {
-          notice.textContent = "Please fill in all required fields before submitting.";
+          notice.textContent = isEs ? "Por favor llene todos los campos obligatorios antes de enviar." : "Please fill in all required fields before submitting.";
           notice.style.display = "block";
         }
       }
@@ -163,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var dot = document.createElement("button");
       dot.type = "button";
       dot.className = "carousel-dot" + (i === 0 ? " is-active" : "");
-      dot.setAttribute("aria-label", "Go to project photo " + (i + 1));
+      dot.setAttribute("aria-label", (isEs ? "Ir a la foto del proyecto " : "Go to project photo ") + (i + 1));
       dot.addEventListener("click", function () {
         slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
       });
